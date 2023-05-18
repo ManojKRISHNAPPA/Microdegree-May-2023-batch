@@ -1,8 +1,1 @@
-Hello gunew file mode 100644
-index 0000000..e69de29
-diff --git a/kubernetes/Readme.MD b/kubernetes/Readme.MD
-new file mode 100644
-index 0000000..e69de29
-diff --git a/linux/Readme.MD b/linux/Readme.MD
-new file mode 100644   
-do not delete or over write 
+file refreshed.
