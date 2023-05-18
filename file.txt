@@ -1,5 +1,5 @@
 #!/bin/bash
-#
+Hello microdegree
 #This project creates the new user on the local system.
 #You will be prompted to enter the username(login),person name and password 
 #usernaeme password and host name wil be displyed at the end of the project. 
