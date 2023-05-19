@@ -6,7 +6,7 @@ pipeline{
                 steps{
 		    sh '''
                     echo '"ip adress"'
-		    hostname -I 
+		    hostname  
 		      '''
                 }
             }
