@@ -1,0 +1,54 @@
+pipeline{
+    agent any
+
+        stages{
+            stage(" Operating system name, release, and version"){
+                steps{
+                    sh '''
+                    echo ' Operating system name, release, and version; node name; hardware name; processor type'
+                    uname
+                    '''
+                }
+            }
+            stage(' Cpu details'){
+                steps{
+                    sh '''
+                    echo " CPU details"
+                    lscpu
+                    '''
+                }
+            }
+            stage(' PCI Devices Information'){
+                steps{
+                    sh '''
+                    echo " PCI Devices Information"
+                    lspci
+                    '''
+                }
+            }
+            stage(' disk information'){
+                steps{
+                    sh '''
+                    echo " Disk Informaion"
+                    lsblk
+                    '''
+                }
+            }
+            stage(' disk information'){
+                steps{
+                    sh '''
+                    echo " Disk Informaion"
+                    lsblk
+                    '''
+                }
+            }
+            stage(' RAM Utilizatio'){
+                steps{
+                    sh '''
+                    echo " RAm utilization"
+                    free -m
+                    '''
+                }
+            }
+        }
+}
