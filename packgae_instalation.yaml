@@ -1,0 +1,17 @@
+---
+  - name: this playbook will install multiple-packages
+    hosts: all
+    become: true
+    tasks:
+    - name: install mutltiple package
+      yum: 
+      # name: [git, make wget curl tree telnet gzip]
+        name: "{{ item }}"
+        state: installed 
+
+      with_items:
+        - git
+        - make
+        - telnet
+        - tree
+        - gzip

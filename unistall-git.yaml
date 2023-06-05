@@ -1,0 +1,9 @@
+---
+- name: this playbook will unistall the git
+  hosts: webservers
+  become: true
+  tasks:
+  - name: unistall the git
+    yum:
+      name: git
+      state: removed  

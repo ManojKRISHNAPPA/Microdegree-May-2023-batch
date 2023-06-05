@@ -1,0 +1,24 @@
+--- 
+- name: this playbook install httpd
+  hosts: webservers
+  become: true 
+  vars:
+    port: 8080  
+  tasks:
+  - name: install the httpd package
+    yum: 
+      name: httpd
+      state: installed
+
+  - name: Ensure the default Apache port is {{ port }} on ubuntu
+    lineinfile:
+      path: /etc/httpd/conf/httpd.conf
+      regexp: '^Listen '
+      insertafter: "# /etc/apache2/sites-enabled/000-default.conf"
+      line: Listen {{ port }}
+
+  - name: start httpd service
+    service: 
+      name: httpd
+      state: restarted    
+
