@@ -42,6 +42,13 @@ pipeline{
                     '''
                 }
             }
+             stage('Todays time'){
+              steps{
+                 sh '''
+                 echo " Todays time"
+                  uptime
+                  '''
+            }
 
         }
 }
